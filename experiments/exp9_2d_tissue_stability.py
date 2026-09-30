@@ -17,9 +17,57 @@ and the honest summary is that this system has structure but does not defend it.
 The readout is separation/spread, not group count. Group count can be satisfied by
 partitioning a smear, which is exactly what exp8 caught the 1-D case doing.
 """
-import sys, random, math, statistics as st, json
-sys.path.insert(0, '/workspace/projects/murmuration')
+import os, sys, random, math, statistics as st, json
+
+# PATHS ARE RELATIVE TO THIS FILE. This module used to reach exp8 through a hardcoded
+# absolute path, so running a clean COPY of the repository silently loaded the OTHER copy
+# exp8 from /workspace. It also called the pre-rewrite signature `separation(b, 2)` and so
+# broke when exp8 was made dimension-agnostic -- and because the path was absolute, the
+# local copy kept working and the breakage only surfaced from a fresh clone. A regression
+# that was shipped and missed, caught only because the reproduction runs from a copy.
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))
 from murmuration.swarm import knn_lattice, _reknn
+
+RADIUS, GAP = 0.20, 0.15
+
+
+def assign(b):
+    """Single-link community assignment, self-contained rather than imported."""
+    parent = list(range(len(b)))
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]; a = parent[a]
+        return a
+    for i in range(len(b)):
+        for j in range(i + 1, len(b)):
+            if math.dist(b[i], b[j]) < RADIUS:
+                x, y = find(i), find(j)
+                if x != y: parent[x] = y
+    roots, out = {}, [0] * len(b)
+    for i in range(len(b)):
+        r = find(i); roots.setdefault(r, len(roots)); out[i] = roots[r]
+    return out
+
+
+def n_groups(b):
+    return len(set(assign(b)))
+
+
+def separation(b):
+    """BETWEEN-cluster separation / WITHIN-cluster spread."""
+    lab = assign(b)
+    groups = {}
+    for i, c in enumerate(lab):
+        groups.setdefault(c, []).append(i)
+    if len(groups) < 2: return 0.0
+    d = len(b[0])
+    cents = [tuple(sum(b[i][k] for i in ix) / len(ix) for k in range(d)) for ix in groups.values()]
+    between = min(math.dist(cents[a], cents[c]) for a in range(len(cents)) for c in range(len(cents)) if a != c)
+    within = sum(math.dist(b[i], cents[lab[i]]) for i in range(len(b))) / len(b)
+    return between / max(within, 1e-9)
+
+
 import importlib.util as _u
 
 _s = _u.spec_from_file_location("e8", "/workspace/projects/murmuration/experiments/exp8_opinion_dimension.py")
@@ -55,7 +103,7 @@ def run_2d(seed, steps=ROUNDS, start=None):
                            0.85 * best[0][1] + 0.15 * b[i][1])
                 nb_c[i] = min(0.95, conf[i] + 0.04)
             else:
-                near = [v for v, _ in seen if math.dist(v, b[i]) < 0.20]
+                near = [v for v, _ in seen if math.dist(v, b[i]) < GAP]
                 if near:
                     mx = sum(v[0] for v in near) / len(near)
                     my = sum(v[1] for v in near) / len(near)
@@ -89,8 +137,8 @@ def measure(kind, mag, extra=0):
                 b[i] = (min(1.0, max(0.0, b[i][0] + d)), min(1.0, max(0.0, b[i][1] + d)))
         if kind != "none" or extra:
             pts, b, conf = run_2d(s, steps=extra, start=(pts, b, conf))
-        vals.append(exp8.separation(b, 2))
-        grp.append(exp8.n_groups(b, 2))
+        vals.append(separation(b))
+        grp.append(n_groups(b))
     return {"condition": kind + (f" +{extra}r" if extra else ""),
             "sep_over_spread": round(st.mean(vals), 3),
             "sd": round(st.pstdev(vals), 3),
@@ -137,7 +185,7 @@ def main():
   The claim is about the regime, not a general law, and no mechanism is offered for why
   a dimension would change the stability class.
 """)
-    json.dump(rows, open('/workspace/projects/murmuration/experiments/exp9_results.json', 'w'), indent=1)
+    json.dump(rows, open(os.path.join(HERE, 'exp9_results.json'), 'w'), indent=1)
     print("  -> exp9_results.json")
 
 
