@@ -20,9 +20,16 @@ affected.
 So the claim this file supports is MUCH smaller than the one it made on its first run, and
 the smaller one is the honest one. See the reading at the bottom.
 
-Everything here is dimension-agnostic: the dimension is the LENGTH OF THE BELIEF TUPLE and
-nothing branches on a `dim` flag. The earlier version branched in five places, which is
-how the 1-D arm silently diverged from the 2-D arm in the first place.
+Everything in the DYNAMICS is dimension-agnostic: the update rule, the separation ratio
+and the community assignment are all written against the LENGTH OF THE BELIEF TUPLE, not
+against a `dim` flag. Two places still branch on `dim`, deliberately and visibly: how the
+initial beliefs and seed positions are chosen, and the similarity threshold (0.15 in 1-D,
+0.20 above it). Those are parameters, not logic, and leaving them visible is the point.
+
+The earlier version of this file branched in five places, several of which silently changed
+the DYNAMICS between the 1-D and 2-D arms -- which is how an arm came to seed all three of
+its opinions into the same 16 cells and produce a confident, wrong result. The difference
+between a visible parameter branch and a hidden behavioural one is the whole lesson.
 """
 import sys, random, math, statistics as st, json
 sys.path.insert(0, '/workspace/projects/murmuration')
