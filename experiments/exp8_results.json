@@ -1,18 +1,46 @@
 [
  {
   "condition": "1-D, 3 seeded opinions",
-  "groups_mean": 2.2,
-  "groups_sd": 0.6,
-  "sep_over_spread": 0.784,
-  "sep_over_spread_sd": 0.322,
+  "dim": 1,
+  "n_seeded": 3,
+  "groups_mean": 2.5,
+  "groups_sd": 0.81,
+  "sep_over_spread": 3.693,
+  "sep_over_spread_sd": 4.683,
+  "spread_exceeds_mean": true,
   "non_degenerate": true
  },
  {
   "condition": "2-D, 3 seeded opinions",
+  "dim": 2,
+  "n_seeded": 3,
   "groups_mean": 3.1,
   "groups_sd": 0.3,
   "sep_over_spread": 11.018,
   "sep_over_spread_sd": 3.251,
+  "spread_exceeds_mean": false,
+  "non_degenerate": true
+ },
+ {
+  "condition": "2-D, 4 seeded opinions",
+  "dim": 2,
+  "n_seeded": 4,
+  "groups_mean": 3,
+  "groups_sd": 0.0,
+  "sep_over_spread": 14.549,
+  "sep_over_spread_sd": 4.548,
+  "spread_exceeds_mean": false,
+  "non_degenerate": true
+ },
+ {
+  "condition": "3-D, 4 seeded opinions",
+  "dim": 3,
+  "n_seeded": 4,
+  "groups_mean": 4,
+  "groups_sd": 0.0,
+  "sep_over_spread": 12.289,
+  "sep_over_spread_sd": 2.564,
+  "spread_exceeds_mean": false,
   "non_degenerate": true
  }
 ]
