@@ -150,3 +150,58 @@ information a mean cannot reach (exp 6), and the swarm can hold three opinions (
 **Still untested:** whether the k=16 structure survives anything at all, whether the
 third-opinion result holds with a genuine third value, and whether any of this survives
 contact with a task that has non-stationarity.
+
+---
+
+## exp7–exp10: the round that removed most of the claims above
+
+| # | question | verdict |
+|---|---|---|
+| 7 | is the *barrier* what matters, or voice diversity? | **barrier is decoration** — refutes result 1's framing |
+| 8 | is the two-way limit the opinion space or the rule? | **neither** — and the experiment was buggy |
+| 9 | do the 2-D tissues defend themselves? | **yes** — they recover, and sharpen under abuse |
+| 10 | ordering or mutual non-adjacency? | **inconclusive**, but it found the exp8 bug |
+
+**exp7 refutes result 1 as stated.** exp1's "local beats broadcast on structure" changed two
+things at once: the information topology *and* the number of distinct voices each cell heard.
+Holding cells, rule, input count and rounds identical and varying only whether the six inputs
+can disagree: LOCAL 17.9 communities, BROADCAST 50.8, SKEPTIC (5 distinct + 1 forced) 13.8.
+**The barrier is decoration; voice diversity is the driver.** And BROADCAST's sd of exactly
+0.000 is arithmetic, not robustness — a deterministic mechanism has zero variance by
+construction, and a zero-variance number cannot support a relational claim.
+
+**exp8 was buggy and exp10 found it.** `cx = 0.5 if dim == 1` placed all three 1-D opinions
+into the same spatial band — **verified 16/16 and 16/16 cell overlap** — so "plurality
+collapses to two" was three opinions fighting over the same cells. The tell was exp10
+reporting **0.00 opinion deaths in every condition, including 1-D**: the exact opposite of
+exp8. Corrected, the law is:
+
+| condition | groups | sd | sep/spread | sd |
+|---|---|---|---|---|
+| 1-D, 3 seeded | 2.50 | 0.81 | 3.69 | **4.68 — bimodal** |
+| 2-D, 3 seeded | 3.10 | 0.30 | 11.02 | 3.25 |
+| **2-D, 4 seeded** | **3.00** | **0.00** | 14.55 | 4.55 |
+| **3-D, 4 seeded** | **4.00** | **0.00** | 12.29 | 2.56 |
+
+**A d-dimensional opinion space sustains d+1 tissues.** 2-D *refuses* a fourth (one dies
+every run); 3-D holds four. The 1-D column is bimodal and the file refuses to print its mean.
+
+**The claim is much smaller than it was.** Not "1-D cannot hold three" — 1-D holds 2.50. It
+is: **2-D makes plurality reliable where 1-D makes it a coin flip.**
+
+## The instruments that lied, across all ten experiments
+
+Seven, all caught, none of them by reading the code:
+
+1. A boundary computed **before** the perturbation it measured — four identical numbers presented as stability.
+2. A control that set every sample to an exact value — MAE 0.0000, and it could not fail.
+3. A condition that seeded a "third" opinion at the same value as the first, so it merged by construction.
+4. A min-pairwise-distance metric **pinned at 0.0000** by arithmetic over 4560 pairs.
+5. A "3-layer MLP" that was `w·x + b`.
+6. Unequal input widths (36 vs 4) that measured model capacity and reported it as representation quality.
+7. A seeding bug placing three opinions in the same 16 cells, which produced a confident wrong result for three sessions.
+
+**The pattern, not the list, is the lesson.** Every one of these produced a number that
+looked fine. None was caught by asserting more carefully. All were caught by adding a
+condition that was capable of failing — or by a later experiment producing a number that
+contradicted an earlier one, which is what happened in case 7.
