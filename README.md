@@ -1,51 +1,62 @@
 # murmuration
 
 A swarm of first-person cells that read only their `k` nearest neighbours and reach
-consensus by local deference, with no central authority anywhere in the loop.
+consensus by local deference, with no central authority and **no objective at any time**.
 
-The framing it starts from: **gradient descent is a centralised control scheme wearing the
-costume of a local rule.** One scalar loss reaches every parameter. A murmuration has no
-such scalar — and the interesting question is what lives on the other side of that.
+**Read [`docs/PRIOR-ART.md`](docs/PRIOR-ART.md) first.** An adversarial review against the
+literature killed several of the original claims, and the corrections are more useful than
+the claims were. Three of them:
 
-## What is actually established
+- **The murmuration motivation was backwards.** Cavagna et al. 2010 (PNAS) found starling
+  flocks are *scale-free correlated* and "cannot be divided into independent subparts" —
+  the opposite of the stable-subgroup framing this project started from. (Ballerini 2008's
+  6–7 neighbours is also where `k=6` came from.)
+- **"Local beats broadcast on structure" was a confound.** `exp7` holds cells, rule, input
+  count and rounds identical and varies only whether the inputs can disagree. The barrier
+  is decoration; **voice diversity is the driver.** That result is now annotated as refuted.
+- **The partition result is textbook bounded confidence** — the polarization phase of
+  Hegselmann–Krause, ~2002, with its 1/(2ε) cluster law.
 
-- A local opinion seeded into 5% of cells propagates to global consensus (polarization
-  0.550), and a **no-seed control returns exactly 0.000**, so the number is not the swarm
-  being agreeable with itself.
-- A **central broadcast of the same opinion scores higher (0.700) with sd 0.000 across
-  ten seeds and leaves no structure (50.6 communities vs 41.4).** Authority is stronger,
-  perfectly repeatable, and empty.
-- **Two equally-supported opposing views do not resolve — they partition.** Polarization
-  falls to 0.195, boundary disagreement rises 15.6x, and a degree-preserving rewiring
-  control confirms the opinions are spatially *sorted* (1.25x) rather than scattered.
-- **The JEV probes are a null.** A control showed the probe returns `unclear` to
-  "2+2=4", "2+2=5" and "water is dry" alike. They are reported as carrying no information.
+What is actually left: a novel **control** (degree-preserving rewiring, to separate spatial
+sorting from an edge-count artefact), the finding that structure peaks at an intermediate
+`k` with sorting and division peaking at *different* `k`, and **decentralised estimation
+matching the global mean while being 5× better than a lone cell** — with the scramble
+control showing that it is the mean, computed the long way.
 
 ## Run it
 
 ```bash
-python3 experiments/exp1_propagation.py     # propagation + no-seed + broadcast control
-python3 experiments/exp2_boundary.py        # disagreement, with the rewiring control
-TYPESAFEAI_KEY=... python3 jev_control.py   # is the JEV probe functioning at all?
+python3 experiments/exp1_propagation.py            # propagation + controls
+python3 experiments/exp2_boundary.py               # disagreement + rewiring control
+python3 experiments/exp3_boundary_stability.py     # REFUTES the tissue claim
+python3 experiments/exp4_third_opinion.py          # plurality collapses to two
+python3 experiments/exp5_k_sweep.py                # two different scales
+python3 experiments/exp6_does_it_train.py          # the scramble control refutes the good version
+python3 experiments/exp7_isolating_the_barrier.py  # REFUTES result 2
+TYPESAFEAI_KEY=... python3 jev_control.py          # the JEV probe does not discriminate
 ```
 
-## Two things that were wrong before they were right
+## Mechanisms that were dead before they were alive
 
-Both were caught by controls, not by reading the code:
+Caught by controls, not by reading code:
 
-1. **Averaging has a fixed point at the prior.** Local averaging converged to *undecided*
-   and stayed there — polarization 0.008, stdev 0.0014. Replaced with deference to
-   confidence.
+1. **Averaging has a fixed point at the prior.** Local averaging converged to *undecided* —
+   polarization 0.008, stdev 0.0014. Replaced with deference to confidence.
 2. **Similarity gating cannot carry a belief anywhere.** A 0.12 threshold between a seed at
-   0.85 and neighbours at 0.5 was never satisfied; polarization froze at 0.035, stdev
+   0.85 and neighbours at 0.5 was never satisfied. Polarization froze at 0.035, stdev
    0.0000. A frozen number is not a weak result, it is a dead one.
-
-Full write-up, including the null result and the degenerate-measurement rule applied
-throughout: [`docs/RESEARCH-DIRECTION.md`](docs/RESEARCH-DIRECTION.md).
+3. **The tissue does not defend itself.** A 60% kick plus 180 rounds of annealing heals the
+   swarm into *unanimity* (agreement 0.996), not back into two tissues.
 
 ## The rule this is built to obey
 
-A relational claim over a constant measurement is vacuously true. So a check run against
-a degenerate signal is not a check — it agrees with itself. Every claim here is scored
-**INCONCLUSIVE** when the signal has `std == 0`, never PASSED. Two of the four conditions
-here were degenerate before the controls caught them.
+A relational claim over a constant measurement is vacuously true. Any claim resting on a
+signal with `std == 0` is scored **INCONCLUSIVE, never PASSED** — and that rule cuts both
+ways. It refused three of my own numbers that looked like results: the no-seed control at
+exactly 0.000, the broadcast's sd of 0.000 across ten seeds, and a sortedness metric so
+flat it could not discriminate anything.
+
+Three of my own instruments also lied during this work and were caught: a boundary
+computed before the perturbation it was supposed to measure, a control that set every
+sample to an exact value and could not fail, and a condition that seeded a "third"
+opinion at the same value as the first, so it merged by construction.
