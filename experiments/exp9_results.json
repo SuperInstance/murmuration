@@ -1,0 +1,30 @@
+[
+ {
+  "condition": "none",
+  "sep_over_spread": 11.018,
+  "sd": 3.251,
+  "groups": 3.1,
+  "intact": true
+ },
+ {
+  "condition": "poskick",
+  "sep_over_spread": 11.018,
+  "sd": 3.251,
+  "groups": 3.1,
+  "intact": true
+ },
+ {
+  "condition": "belkick",
+  "sep_over_spread": 5.48,
+  "sd": 3.057,
+  "groups": 3,
+  "intact": true
+ },
+ {
+  "condition": "poskick +180r",
+  "sep_over_spread": 17.032,
+  "sd": 5.767,
+  "groups": 3.1,
+  "intact": true
+ }
+]
