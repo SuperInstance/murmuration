@@ -24,7 +24,7 @@ What is actually left is much smaller — and one piece of it is new. Read
 one fixed local rule.** 2-D holds three opinions and *refuses* a fourth (3.00 groups, sd
 0.000). 3-D holds four (4.00, sd 0.000). 2-D tissues survive a 20% belief kick (11.0 →
 5.5, recovered) and come back *sharper* after the kick that destroyed the 1-D boundary
-(17.0). At `d=1` the behaviour is bimodal and the file refuses to quote its own mean.
+(19.2). At `d=1` the behaviour is bimodal and the file refuses to quote its own mean.
 
 **That version was once a bug, and a later experiment caught it.** The 1-D arm had seeded
 all three opinions into the same spatial band — 16/16 cell overlap — so "plurality
