@@ -1,0 +1,122 @@
+{
+ "real": [
+  {
+   "theta": 0.25,
+   "murmuration": {
+    "mae": 0.0332,
+    "sd": 0.0255,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.2654,
+    "non_degenerate": true
+   },
+   "global": {
+    "mae": 0.0345,
+    "sd": 0.0231,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.2802,
+    "non_degenerate": true
+   },
+   "alone": {
+    "mae": 0.1755,
+    "sd": 0.1115,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.2285,
+    "non_degenerate": true
+   }
+  },
+  {
+   "theta": 0.5,
+   "murmuration": {
+    "mae": 0.0425,
+    "sd": 0.0241,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.5186,
+    "non_degenerate": true
+   },
+   "global": {
+    "mae": 0.025,
+    "sd": 0.0211,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.5106,
+    "non_degenerate": true
+   },
+   "alone": {
+    "mae": 0.193,
+    "sd": 0.1293,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.4581,
+    "non_degenerate": true
+   }
+  },
+  {
+   "theta": 0.75,
+   "murmuration": {
+    "mae": 0.0345,
+    "sd": 0.0247,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.7667,
+    "non_degenerate": true
+   },
+   "global": {
+    "mae": 0.0227,
+    "sd": 0.0188,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.7386,
+    "non_degenerate": true
+   },
+   "alone": {
+    "mae": 0.1807,
+    "sd": 0.1133,
+    "mae_gain_vs_real": null,
+    "mean_estimate": 0.6957,
+    "non_degenerate": true
+   }
+  }
+ ],
+ "null_control": {
+  "murmuration": {
+   "mae": 0.0425,
+   "sd": 0.0241,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.5186,
+   "non_degenerate": true
+  },
+  "global": {
+   "mae": 0.025,
+   "sd": 0.0211,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.5106,
+   "non_degenerate": true
+  },
+  "alone": {
+   "mae": 0.193,
+   "sd": 0.1293,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.4581,
+   "non_degenerate": true
+  }
+ },
+ "scramble_control": {
+  "murmuration": {
+   "mae": 0.0344,
+   "sd": 0.0266,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.2613,
+   "non_degenerate": true
+  },
+  "global": {
+   "mae": 0.0345,
+   "sd": 0.0231,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.2802,
+   "non_degenerate": true
+  },
+  "alone": {
+   "mae": 0.1516,
+   "sd": 0.0827,
+   "mae_gain_vs_real": null,
+   "mean_estimate": 0.23,
+   "non_degenerate": true
+  }
+ }
+}
