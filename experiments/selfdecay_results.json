@@ -1,0 +1,689 @@
+{
+ "rows": [
+  {
+   "domain": "quilt",
+   "sub": "west",
+   "text": "Route the quilt record to the west shelf in the quilt vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.88,
+    "mean": 0.5,
+    "gap": 0.38,
+    "confidence": 0.77,
+    "distribution": {
+     "needs_reasoning": 0.88,
+     "settled": 0.12
+    }
+   }
+  },
+  {
+   "domain": "lumen",
+   "sub": "east",
+   "text": "Route the lumen record to the east shelf in the lumen vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.9,
+    "mean": 0.5,
+    "gap": 0.4,
+    "confidence": 0.81,
+    "distribution": {
+     "needs_reasoning": 0.9,
+     "settled": 0.1
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "rim",
+   "text": "Route the veil record to the rim shelf in the veil vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.91,
+    "mean": 0.5,
+    "gap": 0.41,
+    "confidence": 0.81,
+    "distribution": {
+     "needs_reasoning": 0.91,
+     "settled": 0.09
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "east",
+   "text": "Route the veil record to the east shelf in the veil vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "lumen",
+   "sub": "north",
+   "text": "Route the lumen record to the north shelf in the lumen vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.92,
+    "mean": 0.5,
+    "gap": 0.42,
+    "confidence": 0.84,
+    "distribution": {
+     "settled": 0.08,
+     "needs_reasoning": 0.92
+    }
+   }
+  },
+  {
+   "domain": "quilt",
+   "sub": "east",
+   "text": "Route the quilt record to the east shelf in the quilt vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "north",
+   "text": "Route the veil record to the north shelf in the veil vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "forge",
+   "sub": "core",
+   "text": "Route the forge record to the core shelf in the forge vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "archive",
+   "sub": "south",
+   "text": "Route the archive record to the south shelf in the archive vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.88,
+    "mean": 0.5,
+    "gap": 0.38,
+    "confidence": 0.76,
+    "distribution": {
+     "settled": 0.12,
+     "needs_reasoning": 0.88
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "south",
+   "text": "Route the veil record to the south shelf in the veil vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.94,
+    "mean": 0.5,
+    "gap": 0.44,
+    "confidence": 0.88,
+    "distribution": {
+     "needs_reasoning": 0.94,
+     "settled": 0.06
+    }
+   }
+  },
+  {
+   "domain": "quilt",
+   "sub": "east",
+   "text": "Route the quilt record to the east shelf in the quilt vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "atlas",
+   "sub": "north",
+   "text": "Route the atlas record to the north shelf in the atlas vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "west",
+   "text": "Route the cell record to the west shelf in the cell vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "lumen",
+   "sub": "core",
+   "text": "Route the lumen record to the core shelf in the lumen vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "east",
+   "text": "Route the cell record to the east shelf in the cell vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "quilt",
+   "sub": "north",
+   "text": "Route the quilt record to the north shelf in the quilt vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "lumen",
+   "sub": "core",
+   "text": "Route the lumen record to the core shelf in the lumen vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "west",
+   "text": "Route the veil record to the west shelf in the veil vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "reef",
+   "sub": "east",
+   "text": "Route the reef record to the east shelf in the reef vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "east",
+   "text": "Route the cell record to the east shelf in the cell vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "north",
+   "text": "Route the veil record to the north shelf in the veil vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "rim",
+   "text": "Route the veil record to the rim shelf in the veil vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.89,
+    "mean": 0.5,
+    "gap": 0.39,
+    "confidence": 0.79,
+    "distribution": {
+     "needs_reasoning": 0.89,
+     "settled": 0.11
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "north",
+   "text": "Route the cell record to the north shelf in the cell vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.93,
+    "mean": 0.5,
+    "gap": 0.43,
+    "confidence": 0.86,
+    "distribution": {
+     "needs_reasoning": 0.93,
+     "settled": 0.07
+    }
+   }
+  },
+  {
+   "domain": "reef",
+   "sub": "core",
+   "text": "Route the reef record to the core shelf in the reef vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.91,
+    "mean": 0.5,
+    "gap": 0.41,
+    "confidence": 0.82,
+    "distribution": {
+     "settled": 0.09,
+     "needs_reasoning": 0.91
+    }
+   }
+  },
+  {
+   "domain": "atlas",
+   "sub": "rim",
+   "text": "Route the atlas record to the rim shelf in the atlas vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "atlas",
+   "sub": "core",
+   "text": "Route the atlas record to the core shelf in the atlas vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.92,
+    "mean": 0.5,
+    "gap": 0.42,
+    "confidence": 0.83,
+    "distribution": {
+     "needs_reasoning": 0.92,
+     "settled": 0.08
+    }
+   }
+  },
+  {
+   "domain": "forge",
+   "sub": "west",
+   "text": "Route the forge record to the west shelf in the forge vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "reef",
+   "sub": "east",
+   "text": "Route the reef record to the east shelf in the reef vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "archive",
+   "sub": "north",
+   "text": "Route the archive record to the north shelf in the archive vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "core",
+   "text": "Route the veil record to the core shelf in the veil vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.92,
+    "mean": 0.5,
+    "gap": 0.42,
+    "confidence": 0.83,
+    "distribution": {
+     "needs_reasoning": 0.92,
+     "settled": 0.08
+    }
+   }
+  },
+  {
+   "domain": "forge",
+   "sub": "core",
+   "text": "Route the forge record to the core shelf in the forge vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "core",
+   "text": "Route the veil record to the core shelf in the veil vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.92,
+    "mean": 0.5,
+    "gap": 0.42,
+    "confidence": 0.85,
+    "distribution": {
+     "settled": 0.08,
+     "needs_reasoning": 0.92
+    }
+   }
+  },
+  {
+   "domain": "lumen",
+   "sub": "north",
+   "text": "Route the lumen record to the north shelf in the lumen vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.89,
+    "mean": 0.5,
+    "gap": 0.39,
+    "confidence": 0.78,
+    "distribution": {
+     "settled": 0.11,
+     "needs_reasoning": 0.89
+    }
+   }
+  },
+  {
+   "domain": "forge",
+   "sub": "north",
+   "text": "Route the forge record to the north shelf in the forge vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "reef",
+   "sub": "west",
+   "text": "Route the reef record to the west shelf in the reef vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.88,
+    "mean": 0.5,
+    "gap": 0.38,
+    "confidence": 0.76,
+    "distribution": {
+     "needs_reasoning": 0.88,
+     "settled": 0.12
+    }
+   }
+  },
+  {
+   "domain": "archive",
+   "sub": "west",
+   "text": "Route the archive record to the west shelf in the archive vault.",
+   "compiled": false,
+   "gate": {
+    "argmax": "needs_reasoning",
+    "max": 0.88,
+    "mean": 0.5,
+    "gap": 0.38,
+    "confidence": 0.77,
+    "distribution": {
+     "needs_reasoning": 0.88,
+     "settled": 0.12
+    }
+   }
+  },
+  {
+   "domain": "veil",
+   "sub": "west",
+   "text": "Route the veil record to the west shelf in the veil vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "west",
+   "text": "Route the cell record to the west shelf in the cell vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  },
+  {
+   "domain": "atlas",
+   "sub": "north",
+   "text": "Route the atlas record to the north shelf in the atlas vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "needs_reasoning": 0.0,
+     "settled": 1.0
+    }
+   }
+  },
+  {
+   "domain": "cell",
+   "sub": "core",
+   "text": "Route the cell record to the core shelf in the cell vault.",
+   "compiled": true,
+   "gate": {
+    "argmax": "settled",
+    "max": 1.0,
+    "mean": 0.5,
+    "gap": 0.5,
+    "confidence": 1.0,
+    "distribution": {
+     "settled": 1.0,
+     "needs_reasoning": 0.0
+    }
+   }
+  }
+ ],
+ "gap": 0.09533333333333327,
+ "shuffled_gap": -0.009199999999999986,
+ "acc_compiled": 1.0,
+ "acc_uncompiled": 1.0,
+ "verdict": "READS CONTENT -- the separation does not survive shuffling"
+}
