@@ -17,11 +17,24 @@ the claims were. Three of them:
 - **The partition result is textbook bounded confidence** — the polarization phase of
   Hegselmann–Krause, ~2002, with its 1/(2ε) cluster law.
 
-What is actually left: a novel **control** (degree-preserving rewiring, to separate spatial
-sorting from an edge-count artefact), the finding that structure peaks at an intermediate
-`k` with sorting and division peaking at *different* `k`, and **decentralised estimation
-matching the global mean while being 5× better than a lone cell** — with the scramble
-control showing that it is the mean, computed the long way.
+What is actually left is much smaller — and one piece of it is new. Read
+[`docs/TISSUES.md`](docs/TISSUES.md):
+
+**On a line, this system can hold two smear-like groups. In a plane, the same rule holds
+three well-separated communities that survive being kicked** (separation/spread 11.0 vs
+0.78; after a 20% belief kick it drops to 5.5 and recovers; after the kick that destroyed
+the 1-D boundary it comes back *sharper*, 17.0). Bounded confidence is 1-D, so a 2-D local
+rule sustaining three separated communities is a different object.
+
+So dimensionality does not only change how many opinions fit — **it decides whether the
+structure is an attractor or a transient.** On a line, tissue is something the system
+tolerates and then dissolves. In the plane, it restores.
+
+Also left: a novel **control** (degree-preserving rewiring, separating spatial sorting from
+an edge-count artefact), structure peaking at an intermediate `k` with sorting and division
+peaking at *different* `k`, and **decentralised estimation matching the global mean while
+being 5× better than a lone cell** — with the scramble control showing it is the mean,
+computed the long way.
 
 ## Run it
 
@@ -33,6 +46,8 @@ python3 experiments/exp4_third_opinion.py          # plurality collapses to two
 python3 experiments/exp5_k_sweep.py                # two different scales
 python3 experiments/exp6_does_it_train.py          # the scramble control refutes the good version
 python3 experiments/exp7_isolating_the_barrier.py  # REFUTES result 2
+python3 experiments/exp8_opinion_dimension.py     # 1-D vs 2-D: the ceiling is the line
+python3 experiments/exp9_2d_tissue_stability.py   # 2-D tissues are an attractor
 TYPESAFEAI_KEY=... python3 jev_control.py          # the JEV probe does not discriminate
 ```
 
