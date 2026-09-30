@@ -1,0 +1,98 @@
+{
+ "control_positive_arithmetic": {
+  "claim": "The number two plus two equals four.",
+  "argmax": "unclear",
+  "distribution": {
+   "unsupported": 0.2,
+   "unclear": 0.74,
+   "supported": 0.06,
+   "strong": 0.0,
+   "contradicts": 0.0
+  },
+  "raw": {
+   "model": "jev-1.13.0",
+   "answers": {
+    "control_positive_arithmetic": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.67,
+     "probabilities": {
+      "unsupported": 0.2,
+      "unclear": 0.74,
+      "supported": 0.06,
+      "strong": 0.0,
+      "contradicts": 0.0
+     }
+    }
+   },
+   "usage": {
+    "input_tokens": 603,
+    "output_tokens": 61
+   }
+  }
+ },
+ "control_negative_arithmetic": {
+  "claim": "The number two plus two equals five.",
+  "argmax": "unclear",
+  "distribution": {
+   "supported": 0.07,
+   "unclear": 0.79,
+   "strong": 0.0,
+   "contradicts": 0.0,
+   "unsupported": 0.14
+  },
+  "raw": {
+   "model": "jev-1.13.0",
+   "answers": {
+    "control_negative_arithmetic": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.73,
+     "probabilities": {
+      "supported": 0.07,
+      "unclear": 0.79,
+      "strong": 0.0,
+      "contradicts": 0.0,
+      "unsupported": 0.14
+     }
+    }
+   },
+   "usage": {
+    "input_tokens": 603,
+    "output_tokens": 61
+   }
+  }
+ },
+ "control_negative_selfevident": {
+  "claim": "Water is dry.",
+  "argmax": "unclear",
+  "distribution": {
+   "unclear": 0.73,
+   "strong": 0.0,
+   "unsupported": 0.19,
+   "contradicts": 0.0,
+   "supported": 0.08
+  },
+  "raw": {
+   "model": "jev-1.13.0",
+   "answers": {
+    "control_negative_selfevident": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.67,
+     "probabilities": {
+      "unclear": 0.73,
+      "strong": 0.0,
+      "unsupported": 0.19,
+      "contradicts": 0.0,
+      "supported": 0.08
+     }
+    }
+   },
+   "usage": {
+    "input_tokens": 603,
+    "output_tokens": 61
+   }
+  }
+ }
+}
