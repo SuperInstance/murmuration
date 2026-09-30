@@ -77,7 +77,7 @@ def cluster_count(pts, lat, thresh=0.06):
 
 
 def swarm(n=80, k=6, rounds=60, seed=0, inject=None, inject_frac=0.05,
-          central=False, step=0.035, opposed=None):
+          central=False, step=0.035, opposed=None, resume=None):
     """Run the murmuration. `inject` seeds a local opinion into a few cells.
 
     inject_frac   how many cells receive the local opinion (default 5%)
@@ -91,6 +91,15 @@ def swarm(n=80, k=6, rounds=60, seed=0, inject=None, inject_frac=0.05,
                   inputs=[], seed=rng.random()) for i in range(n)]
     for c in cells:
         c.conf = rng.uniform(0.2, 0.8)          # heterogeneous: see swarm.py notes
+    # `resume` lets an experiment shove a finished swarm and then RE-RUN the dynamics.
+    # Measuring a perturbation without re-running measures a stale snapshot -- which is
+    # how the first version of exp3 returned byte-identical numbers for four different
+    # perturbations and looked like a stable result.
+    if resume is not None:
+        pts = [list(p) for p in resume["pts"]]
+        for c, b, cf in zip(cells, resume["beliefs"], resume["conf"]):
+            c._b, c.conf = b, cf
+        lat = _reknn(pts, k)
 
     # Two opposed regions. This is the interesting case: a central system has to break
     # the tie somehow, and anything it uses to break it is authority wearing a hat. A
@@ -215,7 +224,8 @@ def swarm(n=80, k=6, rounds=60, seed=0, inject=None, inject_frac=0.05,
         traj_clust.append(cluster_count(pts, lat))
 
     beliefs = [c._b for c in cells]
-    return {"polarization": traj_pol, "clusters": traj_clust, "beliefs": beliefs,
+    confs = [c.conf for c in cells]
+    return {"polarization": traj_pol, "clusters": traj_clust, "beliefs": beliefs, "conf": confs,
             "boundary": boundary_score(beliefs, lat),
             "pts": pts, "lat": lat, "cells": cells,
             "n_injected": len(injected), "n_opposed": len(opposed_set)}
@@ -238,3 +248,39 @@ def _reknn(pts, k):
                    key=lambda j: (pts[i][0]-pts[j][0])**2 + (pts[i][1]-pts[j][1])**2)
         lat.append([j for j in d if j != i][:k])
     return lat
+
+
+def rewire_degree_preserving(lat, seed=101):
+    """Degree-preserving random rewiring — the null model for 'is this actually sorted?'
+
+    Rewires the lattice while keeping every node's degree, so the comparison against a
+    real lattice is fair: same number of edges, same edge-length distribution shape, no
+    spatial structure. If a real lattice and a rewired one agree equally well, the
+    apparent organisation was an artefact of edge count and the finding is a null.
+    """
+    import random as _r
+    rng = _r.Random(seed)
+    edges = [list(nb) for nb in lat]
+    nodes = [i for i, e in enumerate(edges) for _ in e]
+    rng.shuffle(nodes)
+    for i in range(len(edges)):
+        take = len(edges[i])
+        edges[i] = [n for n in nodes if n != i][:take]
+    return edges
+
+
+def edge_agreement(beliefs, lat):
+    """Mean agreement across edges, in [0,1]. The quantity the rewiring is compared on."""
+    ds = [abs(beliefs[i] - beliefs[j]) for i, nb in enumerate(lat) for j in nb]
+    return 1.0 - (sum(ds) / len(ds)) if ds else 0.0
+
+
+def sortedness(beliefs, lat, seed=101):
+    """How much better the real graph sorts than a degree-matched random one.
+
+    ~1.0 means the beliefs are scattered and any apparent structure is an artefact.
+    Well above 1.0 means the beliefs are genuinely organised in space.
+    """
+    real = edge_agreement(beliefs, lat)
+    rand = edge_agreement(beliefs, rewire_degree_preserving(lat, seed))
+    return (real / max(rand, 1e-9), real, rand)
