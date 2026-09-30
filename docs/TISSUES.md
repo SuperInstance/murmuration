@@ -35,10 +35,10 @@ detects this itself and refuses to present the column cleanly.
 
 | condition | sep/spread | groups |
 |---|---|---|
-| control | 11.018 | 3.10 |
-| 20% **positional** kick | 11.018 | 3.10 |
-| 20% **belief** kick | **5.480** | 3.00 |
-| 60% kick + 180 rounds anneal | **17.032** | 3.10 |
+| control | **13.823** | 3.00 |
+| 20% **positional** kick | 13.823 | 3.00 |
+| 20% **belief** kick | **5.941** | 2.80 |
+| 60% kick + 180 rounds anneal | **19.186** | 3.00 |
 
 **The positional kick is a dud and is reported as a dud.** It moves cells through space
 without touching their beliefs, and the ratio is measured in belief space — verified by
@@ -47,8 +47,8 @@ cannot fail. Presenting it as stability would be the same error as citing a zero
 broadcast as robustness.
 
 The **belief** kick is the real test: displacing 20% of beliefs cuts the ratio from 11.0
-to 5.5 and it recovers. And under the same large kick that collapsed the 1-D boundary in
-exp3, the 2-D configuration returns at **17.0** — sharper than it started.
+to 5.9 and it recovers. And under the same large kick that collapsed the 1-D boundary in
+exp3, the 2-D configuration returns at **19.2** — sharper than it started.
 
 ## The mechanism is still not known
 
