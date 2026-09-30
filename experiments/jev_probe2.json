@@ -1,0 +1,62 @@
+{
+ "arithmetic_true": {
+  "argmax": "true",
+  "max": 1.0,
+  "mean": 0.3333,
+  "gap": 0.6667,
+  "confidence": 1.0,
+  "distribution": {
+   "false": 0.0,
+   "uncertain": 0.0,
+   "true": 1.0
+  }
+ },
+ "arithmetic_false": {
+  "argmax": "false",
+  "max": 1.0,
+  "mean": 0.3333,
+  "gap": 0.6667,
+  "confidence": 1.0,
+  "distribution": {
+   "true": 0.0,
+   "false": 1.0,
+   "uncertain": 0.0
+  }
+ },
+ "absurd": {
+  "argmax": "false",
+  "max": 1.0,
+  "mean": 0.3333,
+  "gap": 0.6667,
+  "confidence": 1.0,
+  "distribution": {
+   "uncertain": 0.0,
+   "true": 0.0,
+   "false": 1.0
+  }
+ },
+ "obvious_true": {
+  "argmax": "true",
+  "max": 1.0,
+  "mean": 0.3333,
+  "gap": 0.6667,
+  "confidence": 1.0,
+  "distribution": {
+   "true": 1.0,
+   "false": 0.0,
+   "uncertain": 0.0
+  }
+ },
+ "obvious_false": {
+  "argmax": "false",
+  "max": 1.0,
+  "mean": 0.3333,
+  "gap": 0.6667,
+  "confidence": 1.0,
+  "distribution": {
+   "true": 0.0,
+   "false": 1.0,
+   "uncertain": 0.0
+  }
+ }
+}
