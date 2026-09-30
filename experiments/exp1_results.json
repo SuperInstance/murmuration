@@ -1,0 +1,38 @@
+[
+ {
+  "condition": "A local-seed (5%, one region)",
+  "final_polarization_mean": 0.5496,
+  "final_polarization_sd_across_seeds": 0.1035,
+  "mean_stdev_within_run": 0.1088,
+  "final_clusters_mean": 41.4,
+  "n_seeds": 10,
+  "non_degenerate": true
+ },
+ {
+  "condition": "B broadcast (central authority)",
+  "final_polarization_mean": 0.7,
+  "final_polarization_sd_across_seeds": 0.0,
+  "mean_stdev_within_run": 0.0129,
+  "final_clusters_mean": 50.6,
+  "n_seeds": 10,
+  "non_degenerate": true
+ },
+ {
+  "condition": "C no-seed (control for DANGER)",
+  "final_polarization_mean": 0.0,
+  "final_polarization_sd_across_seeds": 0.0,
+  "mean_stdev_within_run": 0.0,
+  "final_clusters_mean": 50.6,
+  "n_seeds": 10,
+  "non_degenerate": false
+ },
+ {
+  "condition": "D re-run A (placeholder for split)",
+  "final_polarization_mean": 0.5496,
+  "final_polarization_sd_across_seeds": 0.1035,
+  "mean_stdev_within_run": 0.1088,
+  "final_clusters_mean": 41.4,
+  "n_seeds": 10,
+  "non_degenerate": true
+ }
+]
