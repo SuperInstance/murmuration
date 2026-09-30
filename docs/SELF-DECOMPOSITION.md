@@ -90,3 +90,63 @@ path as the thing it checks, will agree with the bug it was meant to catch.
   populations, not whether it can infer the answer.
 - **The gate is a gate, not an oracle.** 1.000 on 40 cases says the populations separate; it
   does not say the system is correct.
+
+---
+
+## Take two — can the gate INFER, rather than be told?
+
+The first version's honest limit was that the state said "this pair IS / IS NOT in the
+compiled table." That is a giveaway, and it measured separation, not inference.
+
+This version removes it. The gate sees only the case, a description of the compiled class,
+and a count of what has been flattened. **The compiled class is always 5 domains** — same
+size, same shape — so nothing about the description gives membership away. And the gate is
+never asked whether an answer is right.
+
+| | n | mean P(settled) | sd |
+|---|---|---|---|
+| members of the compiled class | 30 | 0.6143 | 0.0712 |
+| non-members | 30 | **0.9637** | 0.0066 |
+
+**Separation: −0.3493. Permuted-membership control: −0.0307.**
+
+### The gate is a conservative decomposer, and the bias is real
+
+The gap is **negative and large**, and the control is near zero, so the gate is genuinely
+reading the case. But it reads it *backwards relative to the intent*:
+
+- **non-member → called "settled": 1.000** — it calls the model for a case it has never seen,
+  every time.
+- **member → called "settled": 0.667** — it correctly skips only two thirds of the cases it
+  could have skipped.
+
+The engine would **under-decompose**, not over-decompose. That direction matters:
+
+> **Failing to skip a case costs a model call. Skipping a case that needed the model costs a
+> wrong answer.** The bias is in the safe direction, and a self-decomposing engine should want
+> it there. A gate optimised for decomposition *rate* rather than for *safety* would have to
+> correct this bias, and correcting it in the other direction is the dangerous move.
+
+So the honest result is not "the gate works." It is: **the question is well-posed for a
+calibrated judgement — it can tell a member from a non-member 9 times out of 10 in aggregate —
+and the default is to keep calling the model.** The decomposition loop therefore grows slowly
+and safely, which is a real engineering property even though it is not the aggressive one the
+seed idea imagined.
+
+### What would settle it
+
+- **Rebalance the criteria** toward "new" and re-measure. If the 0.667 rises without the 1.000
+  falling, the bias is a prior and is correctable. If both fall, the signal is weaker than
+  the numbers suggest.
+- **Asymmetric costs.** Ask directly, with the cost stated: *is it safer to call the model or
+  to run the compiled path?* rather than asking for a category and hoping the threshold lands
+  correctly.
+- **The state-ordering effect** is known to matter for this model, and the class description
+  currently precedes the case. Reversing the order is a one-line check that could move the
+  numbers substantially, and it is the cheapest next thing to run.
+
+### Limits
+
+30 pairs, one synthetic space, a class described in a single sentence. This is evidence that
+the *question* is answerable by a calibrated judgement. It is not evidence that the engine
+works.
