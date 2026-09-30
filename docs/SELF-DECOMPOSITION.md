@@ -135,15 +135,22 @@ seed idea imagined.
 
 ### What would settle it
 
-- **Rebalance the criteria** toward "new" and re-measure. If the 0.667 rises without the 1.000
-  falling, the bias is a prior and is correctable. If both fall, the signal is weaker than
-  the numbers suggest.
+- **Rebalance the criteria** toward "new" and re-measure. **DONE — it did not work, and that
+  is the useful answer.** Pushing the prior toward "new" and reversing the state order (the
+  case before the class) moved members from 0.667 to **0.500** called-settled, while
+  non-members stayed at **1.000**. The gap narrowed from -0.3493 to -0.2081.
+
+  So the conservative bias is **not a threshold artifact that tuning corrects.** It is the
+  signal: the model reliably calls unseen cases "new" and cannot reliably call seen cases
+  "settled," and leaning harder on "new" simply destroys member recall while buying nothing,
+  because the non-member side was already saturated. A self-decomposing engine cannot be
+  coaxed into decomposing more by biasing the question. It has to get better evidence.
 - **Asymmetric costs.** Ask directly, with the cost stated: *is it safer to call the model or
   to run the compiled path?* rather than asking for a category and hoping the threshold lands
   correctly.
-- **The state-ordering effect** is known to matter for this model, and the class description
-  currently precedes the case. Reversing the order is a one-line check that could move the
-  numbers substantially, and it is the cheapest next thing to run.
+- **The state-ordering effect** is known to matter for this model. It was varied together with
+  the rebalance above and did not rescue the member side, so ordering is not the constraint
+  here — evidence quality is.
 
 ### Limits
 
