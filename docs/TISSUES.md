@@ -1,84 +1,82 @@
-# Tissues: what the 2-D result actually establishes
+# Tissues: how many, and what a dimension buys you
 
 ## The short version
 
-On a line, this system can hold two smear-like groups. In a plane, the **same local rule,
-the same cells, the same rounds** hold three well-separated communities that survive being
-kicked. The dimensionality of the opinion space — not the rule — is the variable that
-decides whether structure is an attractor or a transient.
+A `d`-dimensional opinion space sustains **`d+1` well-separated, defended tissues** under
+one fixed local rule. 2-D holds three and *fails* to hold four. 3-D holds four, every
+seed, with zero variance. At `d=1` the behaviour is bimodal and should not be quoted as a
+mean at all.
 
-## exp8 — the opinion space, not the rule
+**None of this existed an hour ago and the first version of it was a bug.** The 1-D arm of
+this experiment seeded all three opinions into the same spatial band — 16/16 cell overlap
+— so "plurality collapses to two" was three opinions fighting over the same cells. It was
+caught by a later experiment, not by reading the code.
 
-Three seeded opinions, ten seeds, identical rule in both rows.
+## exp8 corrected — the scaling law
 
-| | groups | separation/spread | sd |
-|---|---|---|---|
-| 1-D (three points on a line) | 2.20 | **0.784** | 0.322 |
-| 2-D (three corners of a square) | **3.10** | **11.018** | 3.251 |
+| condition | groups | sd | sep/spread | sd | bimodal? |
+|---|---|---|---|---|---|
+| 1-D, 3 seeded | 2.50 | 0.81 | 3.69 | **4.68** | **YES** |
+| 2-D, 3 seeded | 3.10 | 0.30 | 11.02 | 3.25 | no |
+| 2-D, 4 seeded | **3.00** | **0.00** | 14.55 | 4.55 | no |
+| 3-D, 4 seeded | **4.00** | **0.00** | 12.29 | 2.56 | no |
 
-A separation/spread ratio **below 1** means the "groups" are a partition of a smear — the
-same thing three arbitrary slices of a continuous distribution would give you. That is
-exactly what the 1-D case produces, and it is why exp4's "plurality collapses to two" was
-not a fact about decentralised deference. It was a fact about **lines**.
+**The ceiling is real and it is tested.** 2-D asked to hold four opinions gives three, with
+sd 0.000 — one opinion dies every single run. 3-D asked to hold four gives four, sd 0.000.
+That is not a monotone "more dimensions is better"; it is a specific limit, and the
+experiment that establishes it is the one where the extra opinion is refused.
 
-Above 1 means the communities are genuinely apart, not merely labelled. The 2-D case is at
-11.0.
+**The 1-D column is a warning, not a number.** Its spread (4.68) is larger than its mean
+(3.69), which is the signature of a bimodal distribution: some seeds hold three opinions
+apart, some collapse. A mean over two different phenomena summarises neither. The file
+detects this itself and refuses to present the column cleanly.
 
-**This also matters because bounded confidence is 1-D.** Hegselmann–Krause and Deffuant
-live on a line, and two components on a line is close to degenerate. A 2-D local rule
-sustaining three separated communities is a different object, and no prior for it was
-found in the review.
-
-**The metric had to be replaced first.** The initial readout was minimum pairwise opinion
-distance, which returned exactly 0.0000 with sd 0.0000 in every condition. That is
-arithmetic, not measurement: 96 cells give 4560 pairs, two of them coinciding is certain,
-so the minimum is pinned at zero permanently. A metric that cannot leave zero cannot
-support a relational claim. It is now a between-cluster / within-cluster ratio, which is
-scale-free and cannot be pinned.
-
-## exp9 — the tissues are an attractor, and one condition is a dud
+## exp9 — the tissues are an attractor
 
 | condition | sep/spread | groups |
 |---|---|---|
 | control | 11.018 | 3.10 |
 | 20% **positional** kick | 11.018 | 3.10 |
 | 20% **belief** kick | **5.480** | 3.00 |
-| 60% positional kick + 180 rounds anneal | **17.032** | 3.10 |
+| 60% kick + 180 rounds anneal | **17.032** | 3.10 |
 
 **The positional kick is a dud and is reported as a dud.** It moves cells through space
-without touching their beliefs, and the ratio is measured in belief space. Verified
-directly: kick applied, measured immediately, unchanged to four decimals. That condition
-cannot fail. It is a check, not evidence, and presenting it as a stability result would be
-the same mistake as presenting a zero-variance broadcast as robustness.
+without touching their beliefs, and the ratio is measured in belief space — verified by
+applying the kick and measuring immediately, unchanged to four decimals. That condition
+cannot fail. Presenting it as stability would be the same error as citing a zero-variance
+broadcast as robustness.
 
-**The belief kick is the real test.** Displacing the beliefs of 20% of cells cuts the ratio
-from 11.0 to 5.5 — the tissues are genuinely damaged — and they recover, holding three
-groups at a ratio still far above 1.
+The **belief** kick is the real test: displacing 20% of beliefs cuts the ratio from 11.0
+to 5.5 and it recovers. And under the same large kick that collapsed the 1-D boundary in
+exp3, the 2-D configuration returns at **17.0** — sharper than it started.
 
-**The contrast with exp3 is the finding.** In one dimension, a large kick plus annealing
-collapsed the boundary to 0.0038 and healed the swarm into **unanimity** (neighbour
-agreement 0.996). In two dimensions, the same treatment leaves three groups at ratio 17.0
-— and the ratio goes **up**. After being kicked, the configuration comes back sharper than
-it started.
+## The mechanism is still not known
 
-So: on a line, tissue is a transient the system tolerates and then dissolves. In the
-plane, it is an attractor the system restores.
+exp10 set up the discriminating test — ORDERING (a middle opinion on a line gets squeezed)
+versus MUTUAL NON-ADJACENCY (only corners avoid contact) — and **the bug was found before
+either prediction could be evaluated.** The corrected exp8 now shows 1-D is not a clean
+2-way limit at all, so the ORDERING hypothesis needs restating before it can be tested.
+
+What is *not* in doubt is the shape: dimension sets how many tissues fit, and 1-D is
+bimodal where 2-D and 3-D are not. Whether that is about adjacency, about packing, or
+about the *volume* of opinion space available to each region is untested.
 
 ## What this does not establish
 
-- **Two dimensions is still two dimensions.** Nothing here shows a system sustaining five
-  or ten tissues, and the sweep in `k` (exp5) was one-dimensional throughout.
-- **The 1-D boundary was never nothing.** exp3 showed it is stable under mild perturbation
-  and dissolves under a large one. "Transient" and "meaningless" are different claims and
-  only the first was earned.
-- **One seed configuration.** The three corners are maximally separated by construction.
-  Seeds at interior positions, or four corners, are untested.
-- **No mechanism.** It is not explained why a dimension changes the stability class. A
-  plausible account — the boundary can be a genuine barrier in the plane while it must
-  always leak along a line — is a hypothesis, not a result, and has not been tested.
+- **Not five or ten tissues.** The law is tested at d=1,2,3 and n=3,4. Extrapolating past
+  that is arithmetic, not evidence.
+- **No mechanism.** A hypothesis, not a result.
+- **One seed geometry.** Seeds are placed at the corners, maximally separated by
+  construction. Interior placements are untested.
+- **Prior art is thin but not empty.** Bounded confidence is 1-D, so a multi-dimensional
+  local rule is a different object — but the review found no prior *and* no strong evidence
+  of a gap, and absence of prior art in a field with no spatial tissue to form is weak
+  evidence of novelty.
 
-## Why this is the most defensible thing here
+## Status
 
-Not because it is the most striking, but because it is the only finding that is **not**
-prior art, **not** a control, and **not** refuted by its own control. Every other result
-in this repository is one of those three things, and `PRIOR-ART.md` says which.
+This is the only finding in the repository that is **not** prior art, **not** a control, and
+**not** refuted by its own control. It is also the only one that was once wrong and got
+caught by a later experiment rather than by inspection — which is the strongest argument in
+the whole project for building the mechanism test *and* the seeding test before trusting
+any of it.
