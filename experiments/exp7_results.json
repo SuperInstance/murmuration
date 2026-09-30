@@ -1,0 +1,26 @@
+[
+ {
+  "condition": "LOCAL     6 inputs, 6 distinct voices",
+  "polarization": 0.1572,
+  "polarization_sd": 0.1139,
+  "communities": 17.9,
+  "communities_sd": 4.25,
+  "non_degenerate": true
+ },
+ {
+  "condition": "BROADCAST 6 inputs, 1 repeated voice",
+  "polarization": 0.7,
+  "polarization_sd": 0.0,
+  "communities": 50.8,
+  "communities_sd": 2.71,
+  "non_degenerate": true
+ },
+ {
+  "condition": "SKEPTIC   6 inputs, 5 distinct + 1 forced",
+  "polarization": 0.2578,
+  "polarization_sd": 0.1906,
+  "communities": 13.8,
+  "communities_sd": 4.31,
+  "non_degenerate": true
+ }
+]
