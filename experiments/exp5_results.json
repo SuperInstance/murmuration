@@ -1,0 +1,90 @@
+[
+ {
+  "k": 1,
+  "polarization": 0.0259,
+  "polarization_sd": 0.0176,
+  "boundary": 0.0052,
+  "boundary_sd": 0.0071,
+  "sortedness": 1.129,
+  "sortedness_sd": 0.157,
+  "communities": 54.9,
+  "non_degenerate": true
+ },
+ {
+  "k": 2,
+  "polarization": 0.0749,
+  "polarization_sd": 0.0371,
+  "boundary": 0.0116,
+  "boundary_sd": 0.0105,
+  "sortedness": 1.226,
+  "sortedness_sd": 0.08,
+  "communities": 45.9,
+  "non_degenerate": true
+ },
+ {
+  "k": 4,
+  "polarization": 0.1961,
+  "polarization_sd": 0.1518,
+  "boundary": 0.0655,
+  "boundary_sd": 0.0395,
+  "sortedness": 1.295,
+  "sortedness_sd": 0.108,
+  "communities": 37.4,
+  "non_degenerate": true
+ },
+ {
+  "k": 6,
+  "polarization": 0.324,
+  "polarization_sd": 0.1496,
+  "boundary": 0.0756,
+  "boundary_sd": 0.0381,
+  "sortedness": 1.216,
+  "sortedness_sd": 0.13,
+  "communities": 34.2,
+  "non_degenerate": true
+ },
+ {
+  "k": 10,
+  "polarization": 0.2602,
+  "polarization_sd": 0.1995,
+  "boundary": 0.1178,
+  "boundary_sd": 0.0532,
+  "sortedness": 1.225,
+  "sortedness_sd": 0.142,
+  "communities": 27,
+  "non_degenerate": true
+ },
+ {
+  "k": 16,
+  "polarization": 0.3561,
+  "polarization_sd": 0.1699,
+  "boundary": 0.1286,
+  "boundary_sd": 0.0695,
+  "sortedness": 1.099,
+  "sortedness_sd": 0.104,
+  "communities": 25.5,
+  "non_degenerate": true
+ },
+ {
+  "k": 24,
+  "polarization": 0.3926,
+  "polarization_sd": 0.2313,
+  "boundary": 0.1063,
+  "boundary_sd": 0.0639,
+  "sortedness": 1.045,
+  "sortedness_sd": 0.036,
+  "communities": 20,
+  "non_degenerate": true
+ },
+ {
+  "k": 40,
+  "polarization": 0.4515,
+  "polarization_sd": 0.186,
+  "boundary": 0.1075,
+  "boundary_sd": 0.0863,
+  "sortedness": 1.061,
+  "sortedness_sd": 0.088,
+  "communities": 16.1,
+  "non_degenerate": true
+ }
+]
