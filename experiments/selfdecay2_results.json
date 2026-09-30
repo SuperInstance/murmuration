@@ -1,0 +1,549 @@
+{
+ "rows": [
+  {
+   "domain": "archive",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, forge, lumen, veil",
+   "case_desc": "incoming case: domain 'archive', destination 'edge'",
+   "p_settled": 0.52,
+   "argmax": "settled"
+  },
+  {
+   "domain": "cell",
+   "sub": "deep",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, ember, lumen, quilt",
+   "case_desc": "incoming case: domain 'cell', destination 'deep'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, forge, quilt, reef, veil",
+   "case_desc": "incoming case: domain 'veil', destination 'south'",
+   "p_settled": 0.57,
+   "argmax": "settled"
+  },
+  {
+   "domain": "forge",
+   "sub": "south",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, ember, quilt, reef",
+   "case_desc": "incoming case: domain 'forge', destination 'south'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "north",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, dune, forge, quilt, veil",
+   "case_desc": "incoming case: domain 'veil', destination 'north'",
+   "p_settled": 0.68,
+   "argmax": "settled"
+  },
+  {
+   "domain": "quilt",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, forge, reef, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'core'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, dune, lumen, veil",
+   "case_desc": "incoming case: domain 'veil', destination 'south'",
+   "p_settled": 0.78,
+   "argmax": "settled"
+  },
+  {
+   "domain": "lumen",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, ember, quilt, reef",
+   "case_desc": "incoming case: domain 'lumen', destination 'west'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "reef",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, forge, lumen, quilt, reef",
+   "case_desc": "incoming case: domain 'reef', destination 'south'",
+   "p_settled": 0.62,
+   "argmax": "settled"
+  },
+  {
+   "domain": "reef",
+   "sub": "deep",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, ember, forge, quilt",
+   "case_desc": "incoming case: domain 'reef', destination 'deep'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "reef",
+   "sub": "north",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, dune, quilt, reef",
+   "case_desc": "incoming case: domain 'reef', destination 'north'",
+   "p_settled": 0.72,
+   "argmax": "settled"
+  },
+  {
+   "domain": "forge",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, cell, dune, ember, reef",
+   "case_desc": "incoming case: domain 'forge', destination 'core'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "archive",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, cell, lumen, veil",
+   "case_desc": "incoming case: domain 'archive', destination 'edge'",
+   "p_settled": 0.64,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "south",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, ember, forge, lumen, quilt",
+   "case_desc": "incoming case: domain 'veil', destination 'south'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "rim",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, ember, forge, lumen, reef",
+   "case_desc": "incoming case: domain 'ember', destination 'rim'",
+   "p_settled": 0.69,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "north",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, forge, quilt, reef",
+   "case_desc": "incoming case: domain 'ember', destination 'north'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, ember, forge, lumen, reef",
+   "case_desc": "incoming case: domain 'ember', destination 'edge'",
+   "p_settled": 0.58,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "deep",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, lumen, reef",
+   "case_desc": "incoming case: domain 'veil', destination 'deep'",
+   "p_settled": 0.98,
+   "argmax": "new"
+  },
+  {
+   "domain": "cell",
+   "sub": "west",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, forge, lumen, quilt, reef",
+   "case_desc": "incoming case: domain 'cell', destination 'west'",
+   "p_settled": 0.62,
+   "argmax": "settled"
+  },
+  {
+   "domain": "archive",
+   "sub": "deep",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, cell, ember, lumen, veil",
+   "case_desc": "incoming case: domain 'archive', destination 'deep'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "dune",
+   "sub": "core",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, dune, forge, reef",
+   "case_desc": "incoming case: domain 'dune', destination 'core'",
+   "p_settled": 0.5,
+   "argmax": "settled"
+  },
+  {
+   "domain": "reef",
+   "sub": "south",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, ember, forge, lumen, veil",
+   "case_desc": "incoming case: domain 'reef', destination 'south'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "lumen",
+   "sub": "deep",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: forge, lumen, quilt, reef, veil",
+   "case_desc": "incoming case: domain 'lumen', destination 'deep'",
+   "p_settled": 0.57,
+   "argmax": "new"
+  },
+  {
+   "domain": "archive",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: forge, lumen, quilt, reef, veil",
+   "case_desc": "incoming case: domain 'archive', destination 'core'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "dune",
+   "sub": "rim",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, forge, quilt, reef, veil",
+   "case_desc": "incoming case: domain 'dune', destination 'rim'",
+   "p_settled": 0.66,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, ember, lumen",
+   "case_desc": "incoming case: domain 'veil', destination 'west'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "quilt",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, ember, lumen, quilt, reef",
+   "case_desc": "incoming case: domain 'quilt', destination 'edge'",
+   "p_settled": 0.58,
+   "argmax": "settled"
+  },
+  {
+   "domain": "cell",
+   "sub": "edge",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, forge, quilt, veil",
+   "case_desc": "incoming case: domain 'cell', destination 'edge'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "west",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: ember, forge, lumen, quilt, veil",
+   "case_desc": "incoming case: domain 'ember', destination 'west'",
+   "p_settled": 0.68,
+   "argmax": "settled"
+  },
+  {
+   "domain": "quilt",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, dune, ember, reef, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'core'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "cell",
+   "sub": "west",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, cell, dune, ember",
+   "case_desc": "incoming case: domain 'cell', destination 'west'",
+   "p_settled": 0.62,
+   "argmax": "settled"
+  },
+  {
+   "domain": "dune",
+   "sub": "rim",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, ember, forge, reef",
+   "case_desc": "incoming case: domain 'dune', destination 'rim'",
+   "p_settled": 0.95,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "west",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, dune, ember, lumen, veil",
+   "case_desc": "incoming case: domain 'ember', destination 'west'",
+   "p_settled": 0.65,
+   "argmax": "settled"
+  },
+  {
+   "domain": "forge",
+   "sub": "rim",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, ember, lumen, reef, veil",
+   "case_desc": "incoming case: domain 'forge', destination 'rim'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "quilt",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, ember, quilt, reef, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'edge'",
+   "p_settled": 0.5,
+   "argmax": "new"
+  },
+  {
+   "domain": "dune",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, cell, lumen, quilt",
+   "case_desc": "incoming case: domain 'dune', destination 'west'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "forge",
+   "sub": "deep",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, cell, ember, forge",
+   "case_desc": "incoming case: domain 'forge', destination 'deep'",
+   "p_settled": 0.62,
+   "argmax": "settled"
+  },
+  {
+   "domain": "veil",
+   "sub": "edge",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, ember, forge, reef",
+   "case_desc": "incoming case: domain 'veil', destination 'edge'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "dune",
+   "sub": "north",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, dune, lumen, reef, veil",
+   "case_desc": "incoming case: domain 'dune', destination 'north'",
+   "p_settled": 0.64,
+   "argmax": "settled"
+  },
+  {
+   "domain": "veil",
+   "sub": "north",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, cell, ember, lumen, reef",
+   "case_desc": "incoming case: domain 'veil', destination 'north'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "forge",
+   "sub": "north",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, forge, lumen",
+   "case_desc": "incoming case: domain 'forge', destination 'north'",
+   "p_settled": 0.61,
+   "argmax": "settled"
+  },
+  {
+   "domain": "atlas",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, forge, lumen",
+   "case_desc": "incoming case: domain 'atlas', destination 'west'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, cell, ember, quilt",
+   "case_desc": "incoming case: domain 'ember', destination 'south'",
+   "p_settled": 0.54,
+   "argmax": "settled"
+  },
+  {
+   "domain": "cell",
+   "sub": "east",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, ember, lumen, quilt, veil",
+   "case_desc": "incoming case: domain 'cell', destination 'east'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "veil",
+   "sub": "deep",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, ember, lumen, reef, veil",
+   "case_desc": "incoming case: domain 'veil', destination 'deep'",
+   "p_settled": 0.7,
+   "argmax": "settled"
+  },
+  {
+   "domain": "reef",
+   "sub": "north",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, dune, forge, quilt, veil",
+   "case_desc": "incoming case: domain 'reef', destination 'north'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "quilt",
+   "sub": "core",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, quilt, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'core'",
+   "p_settled": 0.57,
+   "argmax": "settled"
+  },
+  {
+   "domain": "ember",
+   "sub": "edge",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, forge, reef, veil",
+   "case_desc": "incoming case: domain 'ember', destination 'edge'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "lumen",
+   "sub": "rim",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, ember, lumen, quilt",
+   "case_desc": "incoming case: domain 'lumen', destination 'rim'",
+   "p_settled": 0.53,
+   "argmax": "new"
+  },
+  {
+   "domain": "atlas",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: dune, ember, forge, reef, veil",
+   "case_desc": "incoming case: domain 'atlas', destination 'west'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "quilt",
+   "sub": "rim",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, dune, ember, quilt, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'rim'",
+   "p_settled": 0.52,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "west",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, lumen, reef, veil",
+   "case_desc": "incoming case: domain 'ember', destination 'west'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "ember",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, ember, forge, quilt",
+   "case_desc": "incoming case: domain 'ember', destination 'south'",
+   "p_settled": 0.66,
+   "argmax": "settled"
+  },
+  {
+   "domain": "quilt",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, cell, forge, reef, veil",
+   "case_desc": "incoming case: domain 'quilt', destination 'core'",
+   "p_settled": 0.96,
+   "argmax": "new"
+  },
+  {
+   "domain": "atlas",
+   "sub": "edge",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, dune, ember, forge, reef",
+   "case_desc": "incoming case: domain 'atlas', destination 'edge'",
+   "p_settled": 0.52,
+   "argmax": "new"
+  },
+  {
+   "domain": "archive",
+   "sub": "deep",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: atlas, cell, dune, lumen, quilt",
+   "case_desc": "incoming case: domain 'archive', destination 'deep'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "archive",
+   "sub": "south",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, atlas, dune, ember, forge",
+   "case_desc": "incoming case: domain 'archive', destination 'south'",
+   "p_settled": 0.72,
+   "argmax": "settled"
+  },
+  {
+   "domain": "lumen",
+   "sub": "south",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, dune, quilt, veil",
+   "case_desc": "incoming case: domain 'lumen', destination 'south'",
+   "p_settled": 0.97,
+   "argmax": "new"
+  },
+  {
+   "domain": "dune",
+   "sub": "rim",
+   "compiled": true,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: cell, dune, forge, quilt, veil",
+   "case_desc": "incoming case: domain 'dune', destination 'rim'",
+   "p_settled": 0.62,
+   "argmax": "new"
+  },
+  {
+   "domain": "atlas",
+   "sub": "core",
+   "compiled": false,
+   "class_desc": "the engine has already flattened these domains into compiled arrays: archive, cell, ember, forge, lumen",
+   "case_desc": "incoming case: domain 'atlas', destination 'core'",
+   "p_settled": 0.95,
+   "argmax": "new"
+  }
+ ],
+ "gap": -0.3493333333333334,
+ "shuffled_gap": -0.03066666666666673,
+ "acc_member": 0.6666666666666666,
+ "acc_nonmember": 1.0,
+ "verdict": "READS THE CASE (not the class description)"
+}
