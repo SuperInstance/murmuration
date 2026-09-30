@@ -113,6 +113,7 @@ cited as a strong one.
 | 1 | local rules → global consensus, no authority | **prior art** (Randazzo 2020; k=6 is Ballerini's) |
 | 2 | local beats broadcast on structure | **REFUTED as a barrier claim** — exp7 shows it is voice diversity |
 | 3 | no-seed control → 0.000 | **a control, never a finding** — zero variance is vacuous |
+| — | JEV as a claim probe | **RETRACTED.** The probe discriminates perfectly; the null was a malformed request on my side. A negative control sharing the call under test cannot detect a fault in that path. |
 | 4 | two opposed regions partition, 15.6x boundary | **prior art** (Hegselmann–Krause polarization) |
 | 5 | boundary peaks at k=16, sorting at k=4 | **uncorroborated**; no prior found either way |
 | 6 | decentralised ≈ global estimation, 5x better than alone | **survives** — but the scramble control shows it is the mean, computed locally |
