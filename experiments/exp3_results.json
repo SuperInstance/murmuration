@@ -1,0 +1,47 @@
+[
+ {
+  "condition": "P0 no perturbation (control)",
+  "boundary_mean": 0.0934,
+  "boundary_sd": 0.0382,
+  "sortedness_ratio": 1.264,
+  "real_agreement": 0.9066,
+  "rewired_agreement": 0.7261,
+  "non_degenerate": true
+ },
+ {
+  "condition": "P1 positional kick to 20%",
+  "boundary_mean": 0.0417,
+  "boundary_sd": 0.066,
+  "sortedness_ratio": 1.27,
+  "real_agreement": 0.9583,
+  "rewired_agreement": 0.7682,
+  "non_degenerate": true
+ },
+ {
+  "condition": "P2 opinion flip in 5%",
+  "boundary_mean": 0.0516,
+  "boundary_sd": 0.0398,
+  "sortedness_ratio": 1.27,
+  "real_agreement": 0.9484,
+  "rewired_agreement": 0.7576,
+  "non_degenerate": true
+ },
+ {
+  "condition": "P3 full position scramble",
+  "boundary_mean": 0.0417,
+  "boundary_sd": 0.034,
+  "sortedness_ratio": 1.23,
+  "real_agreement": 0.9583,
+  "rewired_agreement": 0.7924,
+  "non_degenerate": true
+ },
+ {
+  "condition": "P4 kick 60% + 180 rounds anneal",
+  "boundary_mean": 0.0038,
+  "boundary_sd": 0.0075,
+  "sortedness_ratio": 1.237,
+  "real_agreement": 0.9962,
+  "rewired_agreement": 0.8223,
+  "non_degenerate": true
+ }
+]
