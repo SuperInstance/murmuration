@@ -1,0 +1,26 @@
+[
+ {
+  "condition": "A single region seeded (reference)",
+  "neighbour_agreement_real": 0.994,
+  "neighbour_agreement_rewired": 0.9013,
+  "sortedness_ratio": 1.103,
+  "polarization_mean": 0.5496,
+  "polarization_sd": 0.1035,
+  "boundary_mean": 0.006,
+  "boundary_sd": 0.013,
+  "clusters_mean": 41.4,
+  "non_degenerate": true
+ },
+ {
+  "condition": "D two OPPOSED regions, equal size",
+  "neighbour_agreement_real": 0.9066,
+  "neighbour_agreement_rewired": 0.7261,
+  "sortedness_ratio": 1.249,
+  "polarization_mean": 0.195,
+  "polarization_sd": 0.1774,
+  "boundary_mean": 0.0934,
+  "boundary_sd": 0.0382,
+  "clusters_mean": 31.4,
+  "non_degenerate": true
+ }
+]
